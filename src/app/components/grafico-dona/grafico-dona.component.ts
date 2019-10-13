@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ChartType } from 'chart.js';
+import { Component, OnInit, Input } from '@angular/core';
 import { MultiDataSet, Label } from 'ng2-charts';
-/* ******************
-NOTA: ES NECESARIO UTILIZAR LA VERSIÓN 2.2.3 DE ng2-chars para evitar errores
-   ****************** */
+import { ChartType } from 'chart.js';
 
 @Component({
-  selector: 'app-graficas1',
-  templateUrl: './graficas1.component.html',
+  selector: 'app-grafico-dona',
+  templateUrl: './grafico-dona.component.html',
+  //styleUrls: ['./grafico-dona.component.css']
   styles: []
 })
-export class Graficas1Component implements OnInit {
+export class GraficoDonaComponent implements OnInit {
+
+  @Input() chartLabels: Label[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  @Input() chartData: MultiDataSet = [
+    [350, 450, 100],
+    [50, 150, 120],
+    [250, 130, 70],
+  ];
+  @Input() chartType: ChartType = 'doughnut';
 
   graficos: any = {
     'grafico1': {
