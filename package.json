@@ -23,6 +23,9 @@
     "core-js": "^2.5.4",
     "ng2-charts": "^2.2.3",
     "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.5.4",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^9.5.4",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
