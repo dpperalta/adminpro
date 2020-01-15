@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
 
   usuario: Usuario;
   imagenSubir: File;
-  imagenTemp: string;
+  imagenTemp: any; //La primera declaración fue de tipo string pero dio error
 
   constructor(
     public _usuarioService: UsuarioService
