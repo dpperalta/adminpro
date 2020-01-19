@@ -121,7 +121,6 @@ export class UsuarioService {
                 let usuarioDB = resp.usuario;
                 this.guardarStorage(usuarioDB._id, this.token, usuarioDB);
               }
-              
               Swal.fire('Usuario Actualizado', usuario.nombre, 'success');
               return true;
             });

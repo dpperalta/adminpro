@@ -12,8 +12,10 @@ import { ModalUploadService } from '../../components/modal-upload/modal-upload.s
 export class UsuariosComponent implements OnInit {
 
   usuarios: Usuario[] = [];
-  desde: Number = 0;
-  totalRegistros: Number = 0;
+  //desde: Number = 0; // Tipo Number era el original, pero dio error que no se puede asignar el operador + al Number (REVISAR)
+  desde: any = 0;
+  //totalRegistros: Number = 0;
+  totalRegistros: any = 0;
   cargando: boolean = true;
 
   constructor(
