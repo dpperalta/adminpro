@@ -49,6 +49,9 @@ export class MedicosComponent implements OnInit {
           .subscribe((resp: any) =>{
             console.log(resp);
             this.totalRegistros = resp.total;
+            if(resp.medicos.hospital === null){
+              resp.medicos.hospital = '';
+            }
             this.medicos = resp.medicos;
             this.cargando = false;
           })

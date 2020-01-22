@@ -21,6 +21,8 @@ export class ModalUploadComponent implements OnInit {
   ngOnInit() {
   }
 
+  oculto: string = 'oculto';
+
   cerrarModal(){
     this.imagenTemp = null;
     this.imagenSubir = null;
